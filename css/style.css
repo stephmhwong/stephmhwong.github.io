@@ -133,6 +133,7 @@ a {
     align-items: center;
     flex-wrap: wrap;
     margin-top: 20px;
+    max-width: 2000px;
 }
 
 #workexp .expitem {
@@ -143,27 +144,89 @@ a {
     justify-content: center;
 	padding: 30px;
 	border-radius: 15px;
-	background-color: var(--pink);
-	max-width: 450px;
+	max-width: 550px;
 	margin: 30px;
 	position: relative;
 }
 
+#workexp .expitem:nth-child(1):hover {
+    background-color: rgb(255, 204, 213, 35%);
+}
+
+#workexp .expitem:nth-child(2):hover {
+    background-color: rgb(164, 203, 155,35%);
+}
+
+#workexp .expitem:nth-child(3):hover {
+    background-color: rgb(238, 238, 238, 35%);
+}
+
+#workexp .expitem:nth-child(4):hover {
+    background-color: rgb(144, 122, 167, 35%);
+}
+
 #workexp .expitem h2 {
-    font-size: 1.5rem;
+    font-size: 2.25rem;
+    text-align: left;
     font-weight: 900;
     padding-bottom: 0.75rem;
     padding-top: 0.75rem;
+    color: var(--white);
 }
 
 #workexp .expitem p {
-    font-size: 1.25rem;
+    font-size: 2rem;
     text-align: left;
+    color: var(--white);
 }
 
 #workexp .expbottom .expitem .icon {
-    height: 80px;
-	width: 80px;
-	margin-bottom: 20px;
+    color: var(--white);
+    padding: 0.8rem;
 }
 /* End Experiences section */
+
+/* Projects section */
+#projects .container {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#projects .projheader h1 {
+    margin-bottom: 50px;
+}
+
+#projects .sectiontitle {
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    text-align: center;
+}
+
+#projects .sectiontitle span {
+    color: var(--pink);
+}
+
+#projects .allprojects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#projects .projectitem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* End Projects section */
