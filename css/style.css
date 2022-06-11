@@ -66,7 +66,8 @@ a {
 }
 
 #hero .middle .socials {
-    margin-top: 3rem;
+    margin-top: 1rem;
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -353,10 +354,10 @@ a {
 
 #about .rightcolumn a {
     float: left;
-    display: inline-block;
     padding: 10px 30px;
     background-color: transparent;
     border: 2px solid var(--pink);
+    border-radius: 5px;
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
     margin-bottom: 15px;
@@ -368,3 +369,55 @@ a {
     background-color: rgb(255, 202, 212, 35%);
 }
 /* End About Me Section */
+
+/* Footer */
+#footer {
+    background-color: #67687d;
+    color: var(--white);
+}
+
+#footer .container {
+    flex-direction: column;
+    min-height: 150px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+#footer .socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: var(--white);
+}
+
+#footer .socials a {
+    padding: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg);
+    cursor: pointer;
+    background-color: #c9c9cd;
+}
+
+#footer .socials a:hover {
+    transition: .3s;
+    color: var(--pink);
+}
+
+#footer .logo {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+#footer .logo span{
+    color: var(--pink);
+}
+/* End Footer */
