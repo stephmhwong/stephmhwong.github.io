@@ -218,7 +218,7 @@ a {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1500px;
+    max-width: 1300px;
 }
 
 #projects .projectitem {
@@ -228,7 +228,7 @@ a {
     justify-content: center;
     flex-direction: column;
     width: 80%;
-    margin: 0px 30px;
+    margin: 0px 15px;
     border-radius: 15px;
     max-width: 400px;
     position: relative;
@@ -298,7 +298,9 @@ a {
 
 /* About Me section */
 #about .container {
-    flex-direction: column-reverse;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
     max-width: 1200px;
     padding: 100px 20px;
@@ -306,6 +308,63 @@ a {
 }
 
 #about .leftcolumn {
-    
+    width: 300px;
+    height: 400px;
+    max-width: 450px;
+}
+
+#about .rightcolumn {
+    max-width: 550px;
+    padding: 50px;
+}
+
+#about .leftcolumn .profilepic {
+    padding: 40px;
+}
+#about .rightcolumn h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    text-align: left;
+}
+
+#about .rightcolumn h1 span {
+    color: var(--pink);
+}
+
+#about .rightcolumn h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 15px;
+    color: var(--white);
+    text-align: left;
+}
+
+#about .rightcolumn p {
+    margin-bottom: 15px;
+    color: var(--white);
+    text-align: left;
+    font-size: 1.25rem;
+}
+
+#about .rightcolumn a {
+    float: left;
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid var(--pink);
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 15px;
+    transition: 0.3s ease;
+    transition-property: background-color;
+}
+
+#about .rightcolumn a:hover {
+    background-color: rgb(255, 202, 212, 35%);
 }
 /* End About Me Section */
