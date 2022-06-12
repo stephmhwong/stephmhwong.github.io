@@ -217,11 +217,11 @@ a {
 
 /* End Hero Section */
 
-/* Experiences section */
+/* Experience Section */
 #workexp .container {
     flex-direction: column;
     text-align: center;
-    max-width: 1500px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 100px 0;
 }
@@ -252,61 +252,66 @@ a {
 
 #workexp .expbottom {
     display: flex;
+    padding: 30px;
+	margin-top: 20px;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    max-width: 2000px;
 }
 
-#workexp .expitem {
-    flex-basis: 80%;
-	display: flex;
-	flex-direction: column;
-    align-items: flex-start;
+#workexp .tab {
+    float: left;
+    background-color: #67687d;
+    width: auto;
+    height: auto;
+}
+
+#workexp .tab button {
+    display: block;
+    background-color: #67687d;
+    color: var(--white);
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#workexp .tab button:hover {
+    background-color: #383942;
+}
+
+#workexp .tabcontent {
+    padding: 60px;
     justify-content: center;
-	padding: 30px;
-	border-radius: 15px;
-	max-width: 550px;
-	margin: 30px;
-	position: relative;
+    align-items: center;
+    background-color: #7d7e95;
+    width: 70%;
+    height: auto;
+    text-align: left;
+    overflow: hidden;
 }
 
-#workexp .expitem:nth-child(1):hover {
-    background-color: rgb(255, 204, 213, 35%);
-}
-
-#workexp .expitem:nth-child(2):hover {
-    background-color: rgb(164, 203, 155,35%);
-}
-
-#workexp .expitem:nth-child(3):hover {
-    background-color: rgb(238, 238, 238, 35%);
-}
-
-#workexp .expitem:nth-child(4):hover {
-    background-color: rgb(144, 122, 167, 35%);
-}
-
-#workexp .expitem h2 {
-    font-size: 2.25rem;
+#workexp .tabcontent h2 {
+    font-size: 2rem;
     text-align: left;
     font-weight: 900;
     padding-bottom: 0.75rem;
-    padding-top: 0.75rem;
     color: var(--white);
 }
 
-#workexp .expitem p {
-    font-size: 2rem;
+#workexp .tabcontent p {
+    font-size: 1.5rem;
     text-align: left;
     color: var(--white);
 }
 
-#workexp .expbottom .expitem .icon {
+#workexp .tabcontent .icon {
     color: var(--white);
     padding: 0.8rem;
 }
+
 /* End Experiences section */
 
 /* Projects section */
