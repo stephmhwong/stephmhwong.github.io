@@ -55,7 +55,7 @@ a {
 #header .logo {
     font-size: 2rem;
     text-transform: uppercase;
-    padding: 30px;
+    padding: 15px;
     color: var(--white);
 }
 
@@ -111,7 +111,7 @@ a {
     height: 40px;
 	width: 40px;
 	display: inline-block;
-	border: 2px solid white;
+	border: 2px solid var(--white);
 	border-radius: 50%;
     z-index: 100;
     position: relative;
@@ -543,3 +543,30 @@ a {
     color: var(--pink);
 }
 /* End Footer */
+
+/* desktop navbar display */
+@media screen and (min-width: 1200px) {
+    #header .hamburger {
+        display: none;
+    }
+
+    #header .list ul {
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        flex-direction: row;
+        background-color: transparent;
+    }
+    
+    #header .list ul li {
+        display: inline-block;
+    }
+
+    #header .list ul li a {
+        color: var(--white);
+    }
+
+
+}
+/* end desktop navbar display */
