@@ -240,7 +240,7 @@ a {
     color: var(--pink);
 }
 
-#workexp .exptop p {
+#workexp .exp-top p {
     font-size: 2rem;
     margin-top: 5px;
     line-height: 2.5rem;
@@ -250,14 +250,91 @@ a {
     max-width: 1000px;
 }
 
-#workexp .expbottom {
+#workexp .exp-bottom {
     display: flex;
     padding: 30px;
 	margin-top: 20px;
     justify-content: center;
     align-items: center;
+    width: 55vw;
 }
 
+#workexp .tabs {
+    display: flex;
+}
+
+#workexp .tabs-sidebar {
+    width: 150px;
+    flex-shrink: 0;
+
+}
+
+#workexp .tabs-button {
+    color: #d8e2dc;
+    font-weight: 500;
+    font-size: 1.5rem;
+    display: block;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-left: 2px solid rgb(216, 226, 220, 30%);
+}
+
+#workexp .tabs-button-active {
+    font-weight: bold;
+    border-left: 2px solid #d8e2dc;
+    background-color: rgb(103, 104, 125, 35%);
+    padding: 15px;
+}
+
+#workexp .tabs-content {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 0.8rem;
+    display: none;
+}
+
+#workexp .tabs-content-active {
+    display: block;
+}
+
+#workexp .tabs-content h2 {
+    font-size: 2rem;
+    text-align: left;
+    font-weight: 900;
+    padding-bottom: 0.75rem;
+    color: var(--white);
+}
+
+#workexp .tabs-content h2 span {
+    color: var(--pink);
+}
+
+#workexp .tabs-content h3 {
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: 500;
+    padding-bottom: 0.75rem;
+    color: var(--white);
+}
+
+#workexp .tabs-content p {
+    font-size: 1.25rem;
+    text-align: left;
+    color: var(--white);
+}
+
+#workexp .tabs-content .icon {
+    color: var(--white);
+    padding: 0.8rem;
+    text-align: left;
+}
+
+/*
 #workexp .tab {
     float: left;
     background-color: #67687d;
@@ -282,35 +359,14 @@ a {
     background-color: #383942;
 }
 
-#workexp .tabcontent {
-    padding: 60px;
-    justify-content: center;
-    align-items: center;
+#workexp .tab button--active {
+    font-weight: bold;
+    border-right: 2px solid #ffcad4;
     background-color: #7d7e95;
-    width: 70%;
-    height: auto;
-    text-align: left;
-    overflow: hidden;
 }
 
-#workexp .tabcontent h2 {
-    font-size: 2rem;
-    text-align: left;
-    font-weight: 900;
-    padding-bottom: 0.75rem;
-    color: var(--white);
-}
 
-#workexp .tabcontent p {
-    font-size: 1.5rem;
-    text-align: left;
-    color: var(--white);
-}
 
-#workexp .tabcontent .icon {
-    color: var(--white);
-    padding: 0.8rem;
-}
 
 /* End Experiences section */
 

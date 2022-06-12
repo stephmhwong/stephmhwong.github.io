@@ -29,22 +29,33 @@ document.addEventListener('scroll', () => {
 });
 
 // Work experiences tab 
-function openExp(evt, experience) {
+function setupTabs () {
+	document.querySelectorAll(".tabs-button").forEach (button => {
+		button.addEventListener("click", () => {
+			const sideBar = button.parentElement;
+			const tabsContainer = sideBar.parentElement;
+			const tabNumber = button.dataset.forTab;
+			const tabToActivate = tabsContainer.querySelector(`.tabs-content[data-tab = "${tabNumber}"]`);
 
-	// declare variables
-	var i, tabcontent, tablinks;
+			
+			sideBar.querySelectorAll(".tabs-button").forEach(button => {
+				button.classList.remove("tabs-button-active");
+			});
 
-	
-	tabcontent = document.getElementsByClassName("tabcontent");
-	for (i = 0; i < tabcontent.length; i ++) 
-		tabcontent[i].style.display = "none";
+			tabsContainer.querySelectorAll(".tabs-content").forEach(tab => {
+				tab.classList.remove("tabs-content-active");
+			});
 
-	// remove active class
-	tablinks = document.getElementsByClassName("tablinks");
-	for (i = 0; i < tablinks.length; i ++) 
-		tablinks[i].className = tablinks[i].className.replace("active", "");
-
-	// show current tab and add active class to the link opened in tab
-	document.getElementById(experience).style.display = "block";
-	evt.currentTarget.classNmae += "active";
+			button.classList.add("tabs-button-active");
+			tabToActivate.classList.add("tabs-content-active");
+		});
+	});
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    setupTabs();
+
+	document.querySelectorAll(".tabs").forEach(tabsContainer => {
+		tabsContainer.querySelector(".tabs-sidebar .tabs-button").click();
+	})
+});
