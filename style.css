@@ -166,7 +166,7 @@ a {
 }
 
 #hero .container {
-    max-width: 1100px;
+    max-width: 60vw;
 	margin: 0 auto;
 	padding: 0 50px;
 	justify-content: flex-start;
@@ -555,7 +555,7 @@ a {
 
 /* Footer */
 #footer {
-    background-color: #67687d;
+    background-color: rgb(103, 104, 125, 35%);
     color: var(--white);
 }
 
