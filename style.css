@@ -555,7 +555,7 @@ a {
 
 /* Footer */
 #footer {
-    background-color: rgb(103, 104, 125, 35%);
+    background-color: transparent;
     color: var(--white);
 }
 
@@ -584,9 +584,9 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--bg);
+    color: var(--white);
     cursor: pointer;
-    background-color: #c9c9cd;
+    background-color: #67687d;
 }
 
 #footer .socials a:hover {
