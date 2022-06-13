@@ -1,20 +1,20 @@
 // Navbar and Hamburger menu
-const hamburger = document.querySelector('.container .navbar .list .hamburger');
-const mobile_menu = document.querySelector('.container .navbar .list ul');
-const menu_item = document.querySelectorAll('.container .navbar .list ul li a');
+const hamburger = document.querySelector('.container .top-display .nav-bar .hamburger');
+const smallScreen = document.querySelector('.container .top-display .nav-bar ul');
+const items = document.querySelectorAll('.container .top-display .nav-bar ul li a');
 const header = document.querySelector('.container');
 
 // open and close menu manually
 hamburger.addEventListener('click', () => {
 	hamburger.classList.toggle('active');
-	mobile_menu.classList.toggle('active');
+	smallScreen.classList.toggle('active');
 });
 
 // the menu goes away after link is clickes
-menu_item.forEach( link => {
+items.forEach( link => {
 	link.addEventListener('click', ()=> {
 	  	hamburger.classList.remove('show');
-		mobile_menu.classList ="initial";
+		smallScreen.classList ="initial";
 	})
 });
 
@@ -30,24 +30,24 @@ document.addEventListener('scroll', () => {
 
 // Work experiences tab 
 function setupTabs () {
-	document.querySelectorAll(".tabs-button").forEach (button => {
+	document.querySelectorAll(".tab-button").forEach (button => {
 		button.addEventListener("click", () => {
 			const sideBar = button.parentElement;
 			const tabsContainer = sideBar.parentElement;
 			const tabNumber = button.dataset.forTab;
-			const tabToActivate = tabsContainer.querySelector(`.tabs-content[data-tab = "${tabNumber}"]`);
+			const tabToActivate = tabsContainer.querySelector(`.tab-content[data-tab = "${tabNumber}"]`);
 
 			
-			sideBar.querySelectorAll(".tabs-button").forEach(button => {
-				button.classList.remove("tabs-button-active");
+			sideBar.querySelectorAll(".tab-button").forEach(button => {
+				button.classList.remove("tab-button--active");
 			});
 
-			tabsContainer.querySelectorAll(".tabs-content").forEach(tab => {
-				tab.classList.remove("tabs-content-active");
+			tabsContainer.querySelectorAll(".tab-content").forEach(tab => {
+				tab.classList.remove("tab-content--active");
 			});
 
-			button.classList.add("tabs-button-active");
-			tabToActivate.classList.add("tabs-content-active");
+			button.classList.add("tab-button--active");
+			tabToActivate.classList.add("tab-content--active");
 		});
 	});
 }
@@ -56,6 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setupTabs();
 
 	document.querySelectorAll(".tabs").forEach(tabsContainer => {
-		tabsContainer.querySelector(".tabs-sidebar .tabs-button").click();
+		tabsContainer.querySelector(".sidebar .tab-button").click();
 	})
 });

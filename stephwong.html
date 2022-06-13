@@ -4,205 +4,218 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel = "stylesheet" href = "/style.css">
+    <script src="https://kit.fontawesome.com/f452071879.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" class="stylesheet">
+    <link rel="stylesheet" href="/style.css" class="stylesheet">
     <title> Stephanie Wong </title>
 </head>
 <body>
-    <!-- Header -->
-    <section id = "header">
-        <div class = "container">
-            <div class = "navbar">
-                <div class = "logo">
-                    <a href="#hero"><h1><span>S</span>Wong</h1></div></a>
-                <div class = "list">
-                    <div class="hamburger"><div class="bar"></div></div>
+    <!-- Header/ Navbar -->
+    <section id="header">
+        <div class="container">
+            <div class="top-display">
+
+                <!-- for the logo -->
+                <div class="logo">
+                    <a href="#hero"><span>S</span>W</a>
+                </div>
+                <div class="nav-bar">
+
+                    <!-- The hambuger menu navigation -->
+                    <div class="hamburger"><div class="icon"></div></div>
+                    
+                    <!-- References to all the pages -->
                     <ul>
-                        <li><a href = "#hero"> Home </a></li>
-                        <li><a href = "#workexp"> Experiences </a></li>
-                        <li><a href = "#projects"> Projects </a></li>
-                        <li><a href = "#about"> About </a></li>
+                        <li><a href="#exp"> Experiences </a></li>
+                        <li><a href="#projects"> Projects </a></li>
+                        <li><a href="#about"> About </a></li>
+                        <li><a href="/stephwongResume.pdf"> Resume </a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Header -->
 
-    <!-- <!-- Hero Section start -->
-    <section id = "hero">
-        <div class= "container">
-            <div class = "middle"> 
-                <h2 class = "description"> cout << Hello! My name is << endl; </h2>
-                <h1 class = "intro"> <span class = "name"></span> </h1>
-                <div class = "socials">
-                    <a href = "https://www.linkedin.com/in/wongstephaniemh/" target = "_blank"> 
-                        <span class = "icon"><i class = " fa fa-linkedin fa-2x"></i></span></a>
-                    <a href = "https://github.com/stephmhwong" target = "_blank"> 
-                        <span class = "icon"><i class = "fa fa-github fa-3x"></i></span></a>
-                    <a href = "mailto: stephmh.wong@hotmail.com" target = "_blank"> 
-                        <span class = "icon"><i class = "fa fa-envelope fa-2x"> </i></span></a>
-                    <a href = "/stephwongResume.pdf" target = "_blank"> 
-                        <span class = "icon"><i class="fa fa-file-pdf-o fa-2x"></i></span></a>
+    <!-- Hero Section start -->
+    <section id="hero">
+        <div class="container">
+            <div class="middle">
+                <h2 class="description"> cout << Hello! My name is << endl;</h2>
+                <h1 class="intro"><span class = "name"></span></h1>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/wongstephaniemh/" target="_blank" rel="noopener noreferrer">
+                        <span class="icon"><i class="fa-brands fa-linkedin fa-2x"></i></span></a>
+                    <a href="https://github.com/stephmhwong" target="_blank" rel="noopener noreferrer">
+                        <span class="icon"><i class="fa-brands fa-github fa-3x"></i></span></a>
+                    <a href="mailto:stephmh.wong@hotmail.com">
+                        <span class="icon"><i class="fa fa-envelope fa-2x"></i></span></a>
+                    <a href="/stephwongResume.pdf" target = "_blank"> 
+                        <span class="icon"><i class="fa fa-file-pdf-o fa-2x"></i></span></a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Hero Section end -->
 
     <!-- Experiences Section -->
-    <section id = "workexp">
-        <div class = "container">
-            <div class = "exp-top">
-                <h1 class = "exptitle"> <span>E</span>xperiences </h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum deleniti maiores 
-                    pariatur assumenda quas magni et
-                </p>
+    <section id="exp"> 
+        <div class="container">
+            <div class="exp-top">
+                <h1 class="exp-title"> <span>E</span>xperiences </h1>
+                <p> places i've worked. </p>
             </div>
-            <div class = "exp-bottom">
-                <div class = "tabs">
-                    <div class="tabs-sidebar">
-                        <button class = "tabs-button" data-for-tab = "KPMG"> KPMG </button>
-                        <button class = "tabs-button" data-for-tab = "Kumon"> Kumon </button>
-                        <button class = "tabs-button" data-for-tab = "tab1"> Placeholder </button>
-                        <button class = "tabs-button" data-for-tab= "tab2"> Placeholder </button>
+            <div class="exp-bottom">
+                <div class="tabs">
+                    <!-- tabs sidebar -->
+                    <div class="sidebar">
+                        <button class="tab-button" data-for-tab="KPMG"> KPMG </button>
+                        <button class="tab-button" data-for-tab="Kumon"> Kumon </button>
+                        <button class="tab-button" data-for-tab="tab1"> placeholder </button>
+                        <button class="tab-button" data-for-tab="tab2"> placeholder </button>
                     </div>
-                    <!-- Tab content -->
-                <div class = "tabs-content" data-tab = "KPMG">
-                    <h2>Technology Risk Consulting Intern<span> @ KPMG </span></h2>
-                    <h3>May - August 2022</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, 
-                        magni voluptatem sed architecto placeat beatae tenetur officia quod
-                    </p>
-                </div>
-                <div data-tab = "Kumon" class = "tabs-content">
-                    <h2>Teaching Assistant/ Receptionist<span> @ Kumon</span></h2>
-                    <h3>date</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, 
-                        magni voluptatem sed architecto placeat beatae tenetur officia quod
-                    </p>
-                </div>
-                <div data-tab = "tab1" class = "tabs-content">
-                    <h2>Technology Risk Consulting Intern<span> @ KPMG</span></h2>
-                    <h3>date</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, 
-                        magni voluptatem sed architecto placeat beatae tenetur officia quodf
-                    </p>
-                </div>
-                <div data-tab = "tab2" class = "tabs-content">
-                    <h2>KPMG Canada - Technology Risk Intern</h2>
-                    <h3>date</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, 
-                        magni voluptatem sed architecto placeat beatae tenetur officia quod
-                    </p>
-                </div>
+                    <!-- tab content -->
+                    <div class="tab-content" data-tab="KPMG">
+                        <h2>Technology Risk Consulting Intern<span> @ KPMG </span></h2>
+                        <h3>May - August 2022</h3>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, 
+                            magni voluptatem sed architecto placeat beatae tenetur officia quod
+                        </p>
+                    </div>
+                    <div class="tab-content" data-tab="Kumon">
+                        <h2>Teaching Assistant/ Receptionist<span> @ Kumon</span></h2>
+                        <h3>date</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, 
+                            magni voluptatem sed architecto placeat beatae tenetur officia quod
+                        </p>
+                    </div>
+                    <div class="tab-content" data-tab="tab1">
+                        <h2>Technology Risk Consulting Intern<span> @ KPMG</span></h2>
+                        <h3>date</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, 
+                            magni voluptatem sed architecto placeat beatae tenetur officia quodf
+                        </p>
+                    </div>
+                    <div class="tab-content" data-tab="tab2">
+                        <h2>Technology Risk Consulting Intern<span> @ KPMG</span></h2>
+                        <h3>date</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, 
+                            magni voluptatem sed architecto placeat beatae tenetur officia quodf
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-
     </section>
-    <!-- End Experiences Section -->
 
     <!-- Projects Section -->
-    <section id = "projects">
-        <div class = "container">
-            <div class="projheader">
-                <h1 class = "sectiontitle"> Recent <span>Projects</span></h1>
-            </div>
-            <div class = "allprojects">
-                <div class = "projectitem">
-                    <div class = "projectinfo">
+    <section id="projects">
+        <div class="container">
+            <h1 class="projects-title"> Recent <span>Projects</span></h1>
+            <div class="all-projects">
+                <div class="project-item">
+                    <div class="project-info">
                         <h1> Student Support - OSM Map </h1>
                         <h2> Coding is Love </h2>
                         <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
                             rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
                             harum? Ipsum repellat animi, fugit architecto voluptatum odit et! </p>
-                        <div class = "projectimg">
-                            <a href="#" target = "_blank"><img src="/img/osmMap-LightMode.png" alt="img" width = "400" style="border-radius:10px"></a>
+                        <div class="project-img">
+                            <a href="#" target="_blank"><img src="/img/osmMap-LightMode.png" alt="img" width = "400" style="border-radius:10px"></a>
                         </div>
-                        <div class = "links">
-                            <a href = "#" target = "_blank"> github  | </a>
-                            <a href = "#" target = "_blank"> | website </a>
+                        <div class="links">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="icon"><i class="fa fa-github fa-2x"></i></span></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="icon"><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i></span></a>
                         </div>
                     </div>
                 </div>
-                <div class = "projectitem">
-                    <div class = "projectinfo">
+                <div class="project-item">
+                    <div class="project-info">
                         <h1> ZenMo - Productivity App </h1>
                         <h2> Coding is Love </h2>
                         <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
                             rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
                             harum? Ipsum repellat animi, fugit architecto voluptatum odit et! </p>
-                        <div class = "projectimg">
+                        <div class="project-img">
                             <a href="https://devpost.com/software/zen-mo" target = "_blank"><img src="/img/osmMap-LightMode.png" alt="img" width = "400" style="border-radius:10px"></a>
                         </div>
-                        <div class = "links">
-                            <a href = "https://github.com/stephmhwong/productivity-app" target = "_blank"> github  | </a>
-                            <a href = "https://devpost.com/software/zen-mo" target = "_blank"> | website </a>
+                        <div class="links">
+                            <a href="https://github.com/stephmhwong/productivity-app" target="_blank" rel="noopener noreferrer">
+                                <span class="icon"><i class="fa fa-github fa-2x"></i></span></a>
+                            <a href="https://devpost.com/software/zen-mo" target="_blank" rel="noopener noreferrer">
+                                <span class="icon"><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i></span></a>
                         </div>
                     </div>
                 </div>
-                <div class = "projectitem">
-                    <div class = "projectinfo">
+                <div class="project-item">
+                    <div class="project-info">
                         <h1> OSM Map </h1>
                         <h2> Coding is Love </h2>
                         <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
                             rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
                             harum? Ipsum repellat animi, fugit architecto voluptatum odit et! </p>
-                        <div class = "projectimg">
+                        <div class="projec-timg">
                             <a href="#" target = "_blank"><img src="/img/osmMap-LightMode.png" alt="img" width = "400" style="border-radius:10px"></a>
                         </div>
-                        <div class = "links">
-                            <a href = "#" target = "_blank"> github  | </a>
-                            <a href = "#" target = "_blank"> | website </a>
+                        <div class="links">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="icon"><i class="fa fa-github fa-2x"></i></span></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="icon"><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i></span></a>
                         </div>
                     </div>
                 </div>
-                <div class = "projectitem">
-                    <div class = "projectinfo">
+                <div class="project-item">
+                    <div class="project-info">
                         <h1> OSM Map </h1>
                         <h2> Coding is Love </h2>
                         <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
                             rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
                             harum? Ipsum repellat animi, fugit architecto voluptatum odit et! </p>
-                        <div class = "projectimg">
+                        <div class="project-img">
                             <a href="#" target = "_blank"><img src="/img/osmMap-LightMode.png" alt="img" width = "400" style="border-radius:10px"></a>
                         </div>
-                        <div class = "links">
-                            <a href = "#" target = "_blank"> github  | </a>
-                            <a href = "#" target = "_blank"> | website </a>
+                        <div class="links">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="icon"><i class="fa fa-github fa-2x"></i></span></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="icon"><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i></span></a>
                         </div>
                     </div>
                 </div>
-                <div class = "projectitem">
-                    <div class = "projectinfo">
+                <div class="project-item">
+                    <div class="project-info">
                         <h1> OSM Map </h1>
                         <h2> Coding is Love </h2>
                         <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
                             rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
                             harum? Ipsum repellat animi, fugit architecto voluptatum odit et! </p>
-                        <div class = "projectimg">
+                        <div class="project-img">
                             <a href="#" target = "_blank"><img src="/img/osmMap-LightMode.png" alt="img" width = "400" style="border-radius:10px"></a>
                         </div>
-                        <div class = "links">
-                            <a href = "#" target = "_blank"> github  | </a>
-                            <a href = "#" target = "_blank"> | website </a>
+                        <div class="links">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="icon"><i class="fa fa-github fa-2x"></i></span></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="icon"><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i></span></a>
                         </div>
                     </div>
                 </div>
-                <div class = "projectitem">
-                    <div class = "projectinfo">
+                <div class="project-item">
+                    <div class="project-info">
                         <h1> OSM Map </h1>
                         <h2> Coding is Love </h2>
                         <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
                             rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
                             harum? Ipsum repellat animi, fugit architecto voluptatum odit et! </p>
-                        <div class = "projectimg">
+                        <div class="project-img">
                             <a href="#" target = "_blank"><img src="/img/osmMap-LightMode.png" alt="img" width = "400" style="border-radius:10px"></a>
                         </div>
-                        <div class = "links">
-                            <a href = "#" target = "_blank"> github  | </a>
-                            <a href = "#" target = "_blank"> | website </a>
+                        <div class="links">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="icon"><i class="fa fa-github fa-2x"></i></span></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="icon"><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -212,36 +225,35 @@
     <!-- End Project Section -->
 
     <!-- About Me Section -->
-    <section id = "about">
-        <div class = "container">
-            <div class = "leftcolumn">
-                <div class="profilepic">
+    <section id="about">
+        <div class="container">
+            <div class="left-column">
+                <div class="profile-pic">
                     <img src="/img/stephwong-profile.png" alt="img" width = "250">
                 </div>
             </div>
-            <div class = "rightcolumn">
+            <div class="right-column">
                 <h1> About <span>Me</span></h1>
                 <h2> Computer Engineering Student @ UofT </h2>
                 <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
                     rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
                     harum? Ipsum repellat animi, fugit architecto voluptatum odit et! </p>
-                <a href = "/stephwongResume.pdf" target = "_blank"> Download Resume </a>
+                <a href="/stephwongResume.pdf" target = "_blank"> Download Resume </a>
             </div>
         </div>
     </section>
     <!-- End About Me Section -->
     
     <!-- Footer -->
-    <section id = "footer">
-        <div class = "container">
-            <h2> contact info </h2>
-            <div class = "socials">
-                <a href = "https://www.linkedin.com/in/wongstephaniemh/" target = "_blank"> 
-                    <span class = "icon"><i class = " fa fa-linkedin fa-2x"></i></span></a>
-                <a href = "https://github.com/stephmhwong" target = "_blank"> 
-                    <span class = "icon"><i class = "fa fa-github fa-3x"></i></span></a>
-                <a href = "mailto: stephmh.wong@hotmail.com" target = "_blank"> 
-                    <span class = "icon"><i class = "fa fa-envelope fa-2x"> </i></span></a>
+    <section id="footer">
+        <div class="container">
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/wongstephaniemh/" target="_blank"> 
+                    <span class="icon"><i class=" fa-brands fa-linkedin fa-2x"></i></span></a>
+                <a href="https://github.com/stephmhwong" target="_blank"> 
+                    <span class="icon"><i class="fa-brands fa-github fa-3x"></i></span></a>
+                <a href="mailto: stephmh.wong@hotmail.com" target="_blank"> 
+                    <span class="icon"><i class="fa fa-envelope fa-2x"> </i></span></a>
             </div>
             <p>Designed and built by Stephanie Wong</p>
         </div>

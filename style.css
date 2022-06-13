@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@600&family=Roboto+Mono:wght@300;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Montserrat:wght@700;900&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 
 /* colours */
 :root {
@@ -10,6 +11,8 @@
     --green: #A4CB9B;
 }
 
+/* Global styles */
+
 * {
     padding: 0;
     margin: 0;
@@ -17,7 +20,7 @@
 }
 
 html {
-    font-family: "EB Garamond", sans-serif;
+    font-family: "Courier Prime", monospace;
     font-size: 10px;
     scroll-behavior: smooth;
 }
@@ -26,9 +29,6 @@ body {
     background-color: var(--bg);
 }
 
-h1, h2 {
-    font-family: "Roboto Mono",sans-serif;
-}
 a {
     color: var(--white);
     text-decoration: none;
@@ -57,18 +57,7 @@ a {
     background-color: transparent;
 }
 
-#header .logo {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 15px;
-    color: var(--white);
-}
-
-#header .logo span {
-    color: var(--pink);
-}
-
-#header .navbar {
+#header .top-display {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -78,92 +67,119 @@ a {
     padding: 0px 10px;
 }
 
-#header .list ul {
-    font-family: "Roboto Mono", sans-serif;
+#header .logo {
+    font-family: 'Courier Prime', monospace;
+    font-size: 2.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    padding: 15px;
+}
+
+#header .logo span {
+    color: var(--pink);
+}
+
+#header .nav-bar ul {
     list-style: none;
     position: absolute;
     width: 30vw;
     height: 100vh;
     top: 0;
     left: 100%;
-    background-color: #eee;
+    background-color: rgb(103, 104, 126);
     display: flex;
 	flex-direction: column;
 	justify-content: center;
+    align-items: center;
     overflow: hidden;
-	align-items: center;
     transition: 0.5s ease left
 }
 
-#header .list ul.active {
+#header .nav-bar ul.active {
     left: 70%;
 }
 
-#header .list ul a{
-    font-size: 2.25rem;
-    font-weight: 500;
-    color: var(--bg);
-    text-transform: uppercase;
-    padding: 20px;
+#header .nav-bar ul a{
     display: block;
-
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.75rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    color: var(--white);
+    padding: 20px;
 }
 
-#header .list ul a:hover {
+#header .nav-bar ul a:hover {
     color: var(--pink);
 }
 
 #header .hamburger {
+    display: inline-block;
     height: 40px;
 	width: 40px;
-	display: inline-block;
 	border: 2px solid var(--white);
 	border-radius: 50%;
-    z-index: 100;
+    display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
-    display: flex;
     cursor: pointer;
+    z-index: 100;
     margin: 30px;
 }
 
-#header .hamburger .bar{
-    height: 3px;
-    width: 20px;
+#header .hamburger .icon {
     position:relative;
     background-color: var(--white);
+    height: 3px;
+    width: 20px;
     z-index: -1;
 }
 
-#header .hamburger .bar::before,
-#header .hamburger .bar::after {
+#header .hamburger .icon::before,
+#header .hamburger .icon::after {
     content: '';
     position: absolute;
+    background-color: var(--white);
     height: 100%;
     width: 100%;
     left: 0;
-    background-color: var(--white);
     transition: 0.3s ease;
     transition-property: bottom, top;
 }
 
-#header .hamburger .bar::before {
-    top: 8px;
-}
+#header .hamburger .icon::before { top: 8px;}
 
-#header .hamburger .bar::after {
-    bottom: 8px;
-}
+#header .hamburger .icon::after { bottom: 8px;}
 
-#header .hamburger.active .bar::before {
-    top: 0px;
-}
+#header .hamburger.active .icon::before { top: 0px;}
 
-#header .hamburger.active .bar::after {
-    bottom: 0px;
+#header .hamburger.active .icon::after { bottom: 0px;}
+
+/* desktop navbar display */
+@media screen and (min-width: 1000px) {
+    #header .hamburger {
+        display: none;
+    }
+
+    #header .nav-bar ul {
+        background-color: transparent;
+        display: block;
+        flex-direction: row;
+        position: initial;
+        width: fit-content;
+        height: auto;
+    }
+    
+    #header .nav-bar ul li {
+        display: inline-block;
+    }
+
+    #header .nav-bar ul li a {
+        color: var(--white);
+    }
 }
-/* End Header */
 
 /* Hero Section */
 #hero {
@@ -172,22 +188,23 @@ a {
 }
 
 #hero .container {
+    justify-content: flex-start;
     max-width: 65vw;
 	margin: 0 auto;
 	padding: 0 50px;
-	justify-content: flex-start;
 }
 
 #hero .middle .intro {
-    font-family: "Roboto Mono", sans-serif;
+    font-family: 'Roboto Mono', monospace;
     font-size: 5.5rem;
-    font-weight: 900;
+    font-weight: 500;
     color: var(--green);
 }
 
 #hero .middle .description {
     margin-top: 2rem;
-    font-family: "Roboto Mono", sans-serif;
+    font-family: 'Courier Prime', monospace;
+    font-weight: 400;
     font-size: 2rem;
     color: var(--pink);
     letter-spacing: 0.25rem;
@@ -204,27 +221,25 @@ a {
 }
 
 #hero .middle .socials a {
-    width: 4.5rem;
-    height: 4.5rem;
-    border-radius: 100%;
+    background-color: #67687d;
+    color: var(--white);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: #eee;
+    width: 4.25rem;
+    height: 4.25rem;
+    border-radius: 50%;
     cursor: pointer;
     margin-right: 1rem;
-    background-color: #67687d;
 }
 
 #hero .middle .socials a:hover {
-    transition: .3s;
     color: var(--pink);
+    transition: .3s;
 }
 
-/* End Hero Section */
-
 /* Experience Section */
-#workexp .container {
+#exp .container {
     flex-direction: column;
     text-align: center;
     max-width: 1000px;
@@ -232,21 +247,21 @@ a {
     padding: 100px 0;
 }
 
-#workexp .exptitle {
+#exp .exp-title {
     font-size: 4rem;
     font-weight: 500;
     color: var(--white);
     margin-bottom: 10px;
-    text-transform: uppercase;
+    text-transform: lowercase;
     letter-spacing: .1rem;
     text-align: center;
 }
 
-#workexp .exptitle span {
+#exp .exp-title span {
     color: var(--pink);
 }
 
-#workexp .exp-top p {
+#exp .exp-top p {
     font-size: 2rem;
     margin-top: 5px;
     line-height: 2.5rem;
@@ -256,7 +271,7 @@ a {
     max-width: 55vw;
 }
 
-#workexp .exp-bottom {
+#exp .exp-bottom {
     display: flex;
     padding: 30px;
 	margin-top: 20px;
@@ -265,116 +280,92 @@ a {
     width: 50vw;
 }
 
-#workexp .tabs {
+#exp .tabs {
     display: flex;
 }
 
-#workexp .tabs-sidebar {
-    width: 150px;
+#exp .sidebar {
+    width: auto;
     flex-shrink: 0;
-
 }
 
-#workexp .tabs-button {
+#exp .tab-button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
     display: block;
     color: #d8e2dc;
-    font-weight: 500;
-    font-size: 1.5rem;
     border: none;
+    outline: none;
     background-color: transparent;
     width: 100%;
-    outline: none;
     cursor: pointer;
-    font-weight: bold;
     border-left: 2px solid rgb(216, 226, 220, 30%);
     padding: 15px;
 }
 
-#workexp .tabs-button-active {
+#exp .tab-button--active {
     font-weight: bold;
     border-left: 2px solid #d8e2dc;
     background-color: rgb(103, 104, 125, 35%);
     padding: 15px;
 }
 
-#workexp .tabs-content {
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: 0.8rem;
+#exp .tab-content {
     display: none;
+    font-size: 0.8rem;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 15px;
 }
 
-#workexp .tabs-content-active {
+#exp .tab-content--active {
     display: block;
 }
 
-#workexp .tabs-content h2 {
+#exp .tab-content h2 {
     font-size: 1.75rem;
-    text-align: left;
     font-weight: 900;
-    padding-bottom: 0.75rem;
     color: var(--white);
+    text-align: left;
+    padding-bottom: 0.75rem;
 }
 
-#workexp .tabs-content h2 span {
+#exp .tab-content h2 span {
     color: var(--pink);
 }
 
-#workexp .tabs-content h3 {
+#exp .tab-content h3 {
     font-size: 1.5rem;
-    text-align: left;
     font-weight: 500;
-    padding-bottom: 0.75rem;
     color: var(--white);
+    text-align: left;
+    padding-bottom: 0.75rem;
 }
 
-#workexp .tabs-content p {
+#exp .tab-content p {
     font-size: 1.25rem;
     text-align: left;
     color: var(--white);
 }
 
-#workexp .tabs-content .icon {
+#exp .tab-content .icon {
     color: var(--white);
+    text-align: left;
     padding: 0.8rem;
-    text-align: left;
 }
 
-/*
-#workexp .tab {
-    float: left;
-    background-color: #67687d;
-    width: auto;
-    height: auto;
+@media screen and (min-width: 1000px) {
+    #exp .exp-bottom {
+        display: flex;
+        padding: 30px;
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+        width: 700px;
+    }
 }
-
-#workexp .tab button {
-    display: block;
-    background-color: #67687d;
-    color: var(--white);
-    padding: 22px 16px;
-    width: 100%;
-    border: none;
-    outline: none;
-    text-align: left;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#workexp .tab button:hover {
-    background-color: #383942;
-}
-
-#workexp .tab button--active {
-    font-weight: bold;
-    border-right: 2px solid #ffcad4;
-    background-color: #7d7e95;
-}
-
-
-
-
-/* End Experiences section */
 
 /* Projects section */
 #projects .container {
@@ -385,25 +376,21 @@ a {
     padding: 100px 0;
 }
 
-#projects .projheader h1 {
-    margin-bottom: 10px;
-}
-
-#projects .sectiontitle {
+#projects .projects-title {
     font-size: 4rem;
     font-weight: 500;
     color: var(--white);
     margin-bottom: 10px;
-    text-transform: uppercase;
+    text-transform: lowercase;
     letter-spacing: .1rem;
     text-align: center;
 }
 
-#projects .sectiontitle span {
+#projects .projects-title span {
     color: var(--pink);
 }
 
-#projects .allprojects {
+#projects .all-projects {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -411,42 +398,42 @@ a {
     max-width: 1300px;
 }
 
-#projects .projectitem {
+#projects .project-item {
     flex-basis: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
     width: 80%;
     margin: 0px 15px;
     border-radius: 15px;
     max-width: 400px;
-    position: relative;
 }
 
-#projects .projectinfo {
-    padding: 30px;
-    flex-basis: 50%;
-    height: 100%;
+#projects .project-info {
     display: flex;
     justify-content: center;
     flex-direction: column;
     color: var(--white);
+    flex-basis: 50%;
+    height: 100%;
+    padding: 30px;
 }
 
-#projects .projectinfo h1 {
+#projects .project-info h1 {
    font-size: 2.25rem;
    text-align: left;
    font-weight: 900;
 }
 
-#projects .projectinfo h2 {
+#projects .project-info h2 {
     font-size: 1.5rem;
     text-align: left;
     font-weight: 500;
 }
 
-#projects .projectinfo p {
+#projects .project-info p {
     text-align: left;
     margin-top: 10px;
     margin-bottom:10px;
@@ -497,35 +484,35 @@ a {
     margin: 0 auto;
 }
 
-#about .leftcolumn {
+#about .left-column {
     width: 300px;
     height: 400px;
     max-width: 450px;
 }
 
-#about .rightcolumn {
+#about .right-column {
     max-width: 550px;
     padding: 50px;
 }
 
-#about .leftcolumn .profilepic {
+#about .left-column .profile-pic {
     padding: 40px;
 }
-#about .rightcolumn h1 {
+#about .right-column h1 {
     font-size: 4rem;
     font-weight: 500;
     color: var(--white);
     margin-bottom: 10px;
-    text-transform: uppercase;
+    text-transform: lowercase;
     letter-spacing: 1rem;
     text-align: left;
 }
 
-#about .rightcolumn h1 span {
+#about .right-column h1 span {
     color: var(--pink);
 }
 
-#about .rightcolumn h2 {
+#about .right-column h2 {
     font-size: 1.8rem;
     font-weight: 500;
     letter-spacing: .2rem;
@@ -534,14 +521,14 @@ a {
     text-align: left;
 }
 
-#about .rightcolumn p {
+#about .right-column p {
     margin-bottom: 15px;
     color: var(--white);
     text-align: left;
     font-size: 1.25rem;
 }
 
-#about .rightcolumn a {
+#about .right-column a {
     float: left;
     padding: 10px 30px;
     background-color: transparent;
@@ -554,13 +541,14 @@ a {
     transition-property: background-color;
 }
 
-#about .rightcolumn a:hover {
+#about .right-column a:hover {
     background-color: rgb(255, 202, 212, 35%);
 }
 /* End About Me Section */
 
 /* Footer */
 #footer {
+    font-family: 'Roboto Mono', monospace;
     background-color: transparent;
     color: var(--white);
 }
@@ -581,18 +569,18 @@ a {
 }
 
 #footer .socials a {
-    padding: 10px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    width: 4.5rem;
-    height: 4.5rem;
-    border-radius: 100%;
+    background-color: #67687d;
+    color: var(--white);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--white);
+    width: 4.25rem;
+    height: 4.25rem;
+    border-radius: 50%;
     cursor: pointer;
-    background-color: #67687d;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 15px;
 }
 
 #footer .socials a:hover {
@@ -600,40 +588,6 @@ a {
     color: var(--pink);
 }
 
-#footer .logo {
-    font-size: 2rem;
-    text-transform: uppercase;
-    color: var(--white);
+#footer p {
+    font-size: 1.25rem;
 }
-
-#footer .logo span{
-    color: var(--pink);
-}
-/* End Footer */
-
-/* desktop navbar display */
-@media screen and (min-width: 1200px) {
-    #header .hamburger {
-        display: none;
-    }
-
-    #header .list ul {
-        position: initial;
-        display: block;
-        height: auto;
-        width: fit-content;
-        flex-direction: row;
-        background-color: transparent;
-    }
-    
-    #header .list ul li {
-        display: inline-block;
-    }
-
-    #header .list ul li a {
-        color: var(--white);
-    }
-
-
-}
-/* end desktop navbar display */
