@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 
 /* colours */
@@ -203,6 +202,7 @@ a {
 
 #hero .middle .description {
     margin-top: 2rem;
+    margin-top: 2rem;
     font-family: 'Courier Prime', monospace;
     font-weight: 400;
     font-size: 2rem;
@@ -211,13 +211,12 @@ a {
 }
 
 #hero .middle .socials {
-    margin-top: 1rem;
-    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 2rem;
     color: var(--white);
+    font-size: 1.25rem;
 }
 
 #hero .middle .socials a {
@@ -363,7 +362,7 @@ a {
         margin-top: 20px;
         justify-content: center;
         align-items: center;
-        width: 700px;
+        width: 750px;
     }
 }
 
@@ -395,20 +394,21 @@ a {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1300px;
+    max-width: 1200px;
 }
 
 #projects .project-item {
     flex-basis: 80%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
     position: relative;
-    width: 80%;
-    margin: 0px 15px;
     border-radius: 15px;
-    max-width: 400px;
+    background-color: rgb(103, 104, 125, 35%);
+    margin: 20px 15px;
+    max-width: 325px;
+}
+#projects .project-item:hover {
+    transform: scale(1.05);
 }
 
 #projects .project-info {
@@ -424,26 +424,31 @@ a {
 #projects .project-info h1 {
    font-size: 2.25rem;
    text-align: left;
-   font-weight: 900;
+   letter-spacing: 1px;
+   font-weight: 700;
 }
 
 #projects .project-info h2 {
     font-size: 1.5rem;
     text-align: left;
     font-weight: 500;
+    padding-top: 10px;
 }
 
 #projects .project-info p {
+    font-family: "Roboto Mono", monospace;
     text-align: left;
-    margin-top: 10px;
-    margin-bottom:10px;
-    font-size: 1.5rem;
+    padding-top: 10px;
+    padding-bottom:10px;
+    font-size: 1.25rem;
 }
 
 #projects .links {
     display: flex;
-    font-size: 1.5rem;
-    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    font-size: 1.25rem;
 }
 
 #projects .links p {
@@ -451,7 +456,13 @@ a {
 }
 
 #project .links a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     margin-top: 30px;
+    padding: 5px;
+    gap: 2rem;
+    color: var(--white);
     font-size: 1.8rem;
 }
 
@@ -459,7 +470,7 @@ a {
     color: var(--pink);
 }
 
-#projects .projectimg {
+#projects .project-img {
     cursor: pointer;
     z-index: 1;
     transition: transform .2s; 
@@ -467,7 +478,7 @@ a {
     margin-bottom: 10px;
 }
 
-#projects .projectimg:hover {
+#projects .project-img:hover {
     transform: scale(1.05);
 }
 
