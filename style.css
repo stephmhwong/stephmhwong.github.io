@@ -1,5 +1,8 @@
+/* import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slabo+13px&display=swap');
 
 /* colours */
 :root {
@@ -324,6 +327,7 @@ a {
 }
 
 #exp .tab-content h2 {
+    letter-spacing: 0.15rem;
     font-size: 1.75rem;
     font-weight: 900;
     color: var(--white);
@@ -344,6 +348,7 @@ a {
 }
 
 #exp .tab-content p {
+    font-family: 'Roboto Mono', monospace;
     font-size: 1.25rem;
     text-align: left;
     color: var(--white);
@@ -391,10 +396,10 @@ a {
 
 #projects .all-projects {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 80%;
+    justify-content: center;
+    align-items: center;
 }
 
 #projects .project-item {
@@ -404,9 +409,11 @@ a {
     position: relative;
     border-radius: 15px;
     background-color: rgb(103, 104, 125, 35%);
+    height: 300px;
     margin: 20px 15px;
-    max-width: 325px;
+    max-width: 350px;
 }
+
 #projects .project-item:hover {
     transform: scale(1.05);
 }
@@ -422,31 +429,35 @@ a {
 }
 
 #projects .project-info h1 {
-   font-size: 2.25rem;
-   text-align: left;
-   letter-spacing: 1px;
-   font-weight: 700;
+    font-family: 'Slabo 13px', serif;
+    font-size: 2.25rem;
+    text-align: left;
+    letter-spacing: 1px; 
+    font-weight: 700;
 }
 
 #projects .project-info h2 {
     font-size: 1.5rem;
+    letter-spacing: 0.8px;
     text-align: left;
     font-weight: 500;
     padding-top: 10px;
 }
 
 #projects .project-info p {
-    font-family: "Roboto Mono", monospace;
+    font-family: 'Roboto Mono', monospace;
     text-align: left;
     padding-top: 10px;
     padding-bottom:10px;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
 }
 
 #projects .links {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
     gap: 2rem;
     font-size: 1.25rem;
 }
@@ -482,6 +493,13 @@ a {
     transform: scale(1.05);
 }
 
+/* @media screen and (min-width: 1500px) {
+    #projects .all-projects {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1150px;
+    }
+} */
 /* End Projects section */
 
 /* About Me section */
@@ -523,10 +541,10 @@ a {
     color: var(--pink);
 }
 
-#about .right-column h2 {
-    font-size: 1.8rem;
+#about .right-column h4 {
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.35rem;
     font-weight: 500;
-    letter-spacing: .2rem;
     margin-bottom: 15px;
     color: var(--white);
     text-align: left;
@@ -572,6 +590,7 @@ a {
 }
 
 #footer .socials {
+    font-size: 1.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
