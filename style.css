@@ -7,10 +7,20 @@
 /* colours */
 :root {
     --white: #d8e2dc;
-    --purple: #907AA7;
+    --purple: #c69fc3;
     --pink: #ffcad4;
-    --bg: #383942;
-    --green: #A4CB9B;
+    --darkpink: #ff8798;
+    --bg: #2b3038;
+    --lightbg: #575e6a;
+    --tlightbg: #4b515a59;
+    /* --bg: #383942; */
+    --green: #7cb689;
+    --turq: #75c9be;
+    --yellow: #fdc43f;
+    --blue: #68b6f7;
+    --lightblue: #00e5f4;
+    --hover: #ccccaa;
+    /* #ddbea9; */
 }
 
 /* Global styles */
@@ -78,8 +88,8 @@ a {
     padding: 15px;
 }
 
-#header .logo span {
-    color: var(--pink);
+#header .logo:hover {
+    transform: scale(1.3);
 }
 
 #header .nav-bar ul {
@@ -89,7 +99,7 @@ a {
     height: 100vh;
     top: 0;
     left: 100%;
-    background-color: rgb(103, 104, 126);
+    background-color: var(--tlightbg);
     display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -113,8 +123,9 @@ a {
 }
 
 #header .nav-bar ul a:hover {
-    color: var(--pink);
+    transform: scale(1.3);
 }
+
 
 #header .hamburger {
     display: inline-block;
@@ -209,7 +220,7 @@ a {
     font-family: 'Courier Prime', monospace;
     font-weight: 400;
     font-size: 2rem;
-    color: var(--pink);
+    color: var(--purple);
     letter-spacing: 0.25rem;
 }
 
@@ -220,10 +231,11 @@ a {
     gap: 2rem;
     color: var(--white);
     font-size: 1.25rem;
+    padding-top: 10px;
 }
 
 #hero .middle .socials a {
-    background-color: #67687d;
+    background-color: var(--lightbg);
     color: var(--white);
     display: inline-flex;
     align-items: center;
@@ -236,8 +248,7 @@ a {
 }
 
 #hero .middle .socials a:hover {
-    color: var(--pink);
-    transition: .3s;
+    transform: scale(1.25);
 }
 
 /* Experience Section */
@@ -259,9 +270,9 @@ a {
     text-align: center;
 }
 
-#exp .exp-title span {
-    color: var(--pink);
-}
+/* #exp .exp-title span {
+    color: var(--turq);
+} */
 
 #exp .exp-top p {
     font-size: 2rem;
@@ -269,7 +280,7 @@ a {
     line-height: 2.5rem;
     font-weight: 300;
     letter-spacing: 0.1rem;
-    color: var(--white);
+    color: var(--turq);
     max-width: 55vw;
 }
 
@@ -292,7 +303,7 @@ a {
 }
 
 #exp .tab-button {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Slabo 13px', serif;
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 0.2rem;
@@ -327,6 +338,7 @@ a {
 }
 
 #exp .tab-content h2 {
+    font-family: 'Slabo 13px', serif;
     letter-spacing: 0.15rem;
     font-size: 1.75rem;
     font-weight: 900;
@@ -336,10 +348,11 @@ a {
 }
 
 #exp .tab-content h2 span {
-    color: var(--pink);
+    color: var(--purple);
 }
 
 #exp .tab-content h3 {
+    font-family: 'Slabo 13px', serif;
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--white);
@@ -349,8 +362,10 @@ a {
 
 #exp .tab-content p {
     font-family: 'Roboto Mono', monospace;
-    font-size: 1.25rem;
     text-align: left;
+    padding-top: 10px;
+    padding-bottom:10px;
+    font-size: 1.35rem;
     color: var(--white);
 }
 
@@ -391,7 +406,7 @@ a {
 }
 
 #projects .projects-title span {
-    color: var(--pink);
+    color: var(--darkpink);
 }
 
 #projects .all-projects {
@@ -408,7 +423,7 @@ a {
     flex-direction: column;
     position: relative;
     border-radius: 15px;
-    background-color: rgb(103, 104, 125, 35%);
+    background-color: var(--tlightbg);
     height: 300px;
     margin: 20px 15px;
     max-width: 350px;
@@ -433,7 +448,12 @@ a {
     font-size: 2.25rem;
     text-align: left;
     letter-spacing: 1px; 
+    color: var(--blue);
     font-weight: 700;
+}
+
+#projects .project-info h1 span {
+    color: var(--turq);
 }
 
 #projects .project-info h2 {
@@ -441,6 +461,7 @@ a {
     letter-spacing: 0.8px;
     text-align: left;
     font-weight: 500;
+    color: var(--yellow);
     padding-top: 10px;
 }
 
@@ -478,7 +499,7 @@ a {
 }
 
 #projects .links a:hover {
-    color: var(--pink);
+    transform: scale(1.2);
 }
 
 #projects .project-img {
@@ -538,7 +559,7 @@ a {
 }
 
 #about .right-column h1 span {
-    color: var(--pink);
+    color: var(--purple);
 }
 
 #about .right-column h4 {
@@ -548,6 +569,10 @@ a {
     margin-bottom: 15px;
     color: var(--white);
     text-align: left;
+}
+
+#about .right-column h4 span {
+    color: var(--turq);
 }
 
 #about .right-column p {
@@ -561,7 +586,7 @@ a {
     float: left;
     padding: 10px 30px;
     background-color: transparent;
-    border: 2px solid var(--pink);
+    border: 2px solid var(--darkpink);
     border-radius: 5px;
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
@@ -571,7 +596,7 @@ a {
 }
 
 #about .right-column a:hover {
-    background-color: rgb(255, 202, 212, 35%);
+    background-color: #ff879859;
 }
 /* End About Me Section */
 
@@ -599,7 +624,7 @@ a {
 }
 
 #footer .socials a {
-    background-color: #67687d;
+    background-color: var(--lightbg);
     color: var(--white);
     display: inline-flex;
     align-items: center;
@@ -614,10 +639,10 @@ a {
 }
 
 #footer .socials a:hover {
-    transition: .3s;
-    color: var(--pink);
+    transform: scale(1.25);
 }
 
 #footer p {
+    margin-top: 1rem;
     font-size: 1.25rem;
 }

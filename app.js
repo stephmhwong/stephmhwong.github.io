@@ -22,7 +22,7 @@ items.forEach( link => {
 document.addEventListener('scroll', () => {
 	var scrollPosition = window.scrollY;
 	if (scrollPosition > 250) {
-		header.style.backgroundColor = '#67687d59';
+		header.style.backgroundColor = '#4b515a59';
 	} else {
 		header.style.backgroundColor = 'transparent';
 	}
