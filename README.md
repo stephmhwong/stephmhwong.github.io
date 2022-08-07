@@ -1,4 +1,4 @@
 # stephwong
 personal website using HTML
 
-https://stephmhwong.github.io/stephwong/
+https://stephmhwong.github.io/sw-cv/
