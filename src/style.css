@@ -216,10 +216,19 @@ a {
 
 #hero .middle .description {
     margin-top: 2rem;
-    margin-top: 2rem;
     font-family: 'Courier Prime', monospace;
     font-weight: 400;
     font-size: 2rem;
+    color: var(--pink);
+    letter-spacing: 0.25rem;
+}
+
+#hero .middle .education {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Courier Prime', monospace;
+    font-weight: 400;
+    font-size: 2.5rem;
     color: var(--purple);
     letter-spacing: 0.25rem;
 }
