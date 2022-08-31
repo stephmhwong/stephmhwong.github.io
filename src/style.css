@@ -295,11 +295,11 @@ a {
 
 #exp .exp-bottom {
     display: flex;
-    padding: 30px;
+    padding: 100px;
 	margin-top: 20px;
     justify-content: center;
     align-items: center;
-    width: 50vw;
+    max-width: 45vw;
 }
 
 #exp .tabs {
@@ -336,9 +336,10 @@ a {
 
 #exp .tab-content {
     display: none;
+    background-color: transparent;
     font-size: 0.8rem;
-    padding-left: 30px;
-    padding-right: 120px;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-top: 15px;
 }
 
