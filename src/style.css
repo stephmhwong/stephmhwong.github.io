@@ -279,10 +279,6 @@ a {
     text-align: center;
 }
 
-/* #exp .exp-title span {
-    color: var(--turq);
-} */
-
 #exp .exp-top p {
     font-size: 2rem;
     margin-top: 5px;
@@ -296,7 +292,7 @@ a {
 #exp .exp-bottom {
     display: flex;
     padding: 100px;
-	margin-top: 20px;
+	margin-top: 0px;
     justify-content: center;
     align-items: center;
     max-width: 45vw;
