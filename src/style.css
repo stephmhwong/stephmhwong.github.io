@@ -337,8 +337,8 @@ a {
 #exp .tab-content {
     display: none;
     font-size: 0.8rem;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 30px;
+    padding-right: 120px;
     padding-top: 15px;
 }
 
