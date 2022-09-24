@@ -360,7 +360,7 @@ a {
     font-family: 'Slabo 13px', serif;
     font-size: 1.5rem;
     font-weight: 500;
-    color: var(--white);
+    color: var(--green);
     text-align: left;
     padding-bottom: 0.75rem;
 }
@@ -412,6 +412,16 @@ a {
 
 #projects .projects-title span {
     color: var(--darkpink);
+}
+
+#projects .projects-top p {
+    font-size: 2rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: var(--green);
+    max-width: 55vw;
 }
 
 #projects .all-projects {
