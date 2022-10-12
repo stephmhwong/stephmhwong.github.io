@@ -563,6 +563,10 @@ a {
 #about .left-column .profile-pic {
     padding: 40px;
 }
+
+#about .left-column .profile{
+    border-radius: 5%;
+}
 #about .right-column h1 {
     font-size: 4rem;
     font-weight: 500;
